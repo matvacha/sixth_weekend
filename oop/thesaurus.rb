@@ -1,3 +1,4 @@
+require 'rspec'
 # Create a thesaurus application. To create it, you will create two classes, Thesaurus and Entry.
 # A Thesaurus will contain many Entries. An Entry contains three primary attributes:
 # word, synonymns, and antonyms. Your application should contain the following features:
@@ -12,3 +13,24 @@
 # and which belongs in the Entry class.
 #
 # And... test your functionality using RSpec!
+class Thesaurus < Entry
+  def words
+    words = []
+  end
+end
+
+class Entry
+  def word
+    words_array = []
+    @word_hash = { :word => "", :synonym => "", :antonym => ""}
+    words_array << word_hash
+  end
+
+  def add_synonym(synonym)
+    @synonyms << synonym
+  end
+
+  def add_antonym(antonym)
+    @antonyms << antonym
+  end 
+end
